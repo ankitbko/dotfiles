@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -e
+set -xv
 
 if [ -z "$BASH_VERSION" ]
 then
