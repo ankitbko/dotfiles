@@ -11,4 +11,4 @@ else
 fi
 
 go get -u github.com/justjanne/powerline-go
-sudo apt-get install fonts-powerline
+apt-get install fonts-powerline
