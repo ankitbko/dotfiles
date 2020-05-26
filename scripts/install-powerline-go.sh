@@ -7,7 +7,7 @@ else
   PLATFORM="linux-amd64"
   PACKAGE_NAME="go$VERSION.$PLATFORM.tar.gz"
   curl -o "$HOME/downloads/$PACKAGE_NAME"  https://dl.google.com/go/$PACKAGE_NAME
-  tar -C /usr/local -xzf $HOME/downloads/$PACKAGE_NAME
+  sudo tar -C /usr/local -xzf $HOME/downloads/$PACKAGE_NAME
 fi
 
 if ! [ -x "$(command -v go)" ]; then
@@ -18,5 +18,5 @@ go get -u github.com/justjanne/powerline-go
 
 # powerline-fonts
 git clone https://github.com/powerline/fonts.git --depth=1 /tmp/powerline-fonts
-/tmp/powerline-fonts/install.sh
+sudo /tmp/powerline-fonts/install.sh
 rm -rf /tmp/powerline-fonts
