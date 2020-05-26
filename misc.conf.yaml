@@ -1,0 +1,2 @@
+- shell:
+    - [./scripts/install-powerline-go.sh, Installing Powerline-Go]

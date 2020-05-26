@@ -10,6 +10,10 @@ else
   tar -C /usr/local -xzf $HOME/downloads/$PACKAGE_NAME
 fi
 
+if ! [ -x "$(command -v go)" ]; then
+  export PATH=$PATH:/usr/local/go/bin:/$GOPATH/bin
+fi
+
 go get -u github.com/justjanne/powerline-go
 
 # powerline-fonts
