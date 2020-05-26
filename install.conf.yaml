@@ -5,4 +5,9 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
 
+- create:
+    - ~/downloads
+
+- shell:
+    - [./scripts/install-powerline-go.sh, Installing Powerline-Go]
 
