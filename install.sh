@@ -1,12 +1,5 @@
 #!/bin/bash
 
-set -xv
-
-if [ -z "$BASH_VERSION" ]
-then
-    exec bash "$0" "$@"
-fi
-
 DEFAULT_CONFIG_PREFIX="default"
 CONFIG_SUFFIX=".conf.yaml"
 DOTBOT_DIR="dotbot"
