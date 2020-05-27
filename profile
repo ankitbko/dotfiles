@@ -9,7 +9,7 @@
 #umask 022
 
 export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:/$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
