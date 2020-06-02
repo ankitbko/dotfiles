@@ -18,5 +18,5 @@ go get -u github.com/justjanne/powerline-go
 
 # powerline-fonts
 git clone https://github.com/powerline/fonts.git --depth=1 /tmp/powerline-fonts
-sudo /tmp/powerline-fonts/install.sh
+/tmp/powerline-fonts/install.sh
 rm -rf /tmp/powerline-fonts
