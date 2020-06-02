@@ -10,6 +10,7 @@
     ~/.profile: profile
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
+    ~/.gitconfig: gitconfig
 
 - create:
     - ~/downloads
