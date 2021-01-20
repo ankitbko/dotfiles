@@ -2,10 +2,10 @@
 	name = Ankit Sinha
 	email = anksinha@microsoft.com
 [alias]
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --graph
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
 	lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
-	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --date=relative  --graph
 	le = log --oneline --decorate
 	filelog = log -u
 	fl = log -u
@@ -24,4 +24,12 @@
 	lt = describe --tags --abbrev=0
 	st = status
 	co = checkout
+	cma = commit --all -m
+	dp = diff --word-diff --unified=10
+	so = show --pretty='parent %Cred%p%Creset commit %Cred%h%Creset%C(yellow)%d%Creset%n%n%w(72,2,2)%s%n%n%w(72,0,0)%C(cyan)%an%Creset %Cgreen%ar%Creset on %C(yellow)%ad%Creset'
+	unstage = reset HEAD
+	undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
+	
+[diff]
+	algorithm = histogram
 	
