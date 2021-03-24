@@ -11,7 +11,7 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
-    ~/.config/nvim/init.vm: init.vm
+    ~/.config/nvim/init.vim: init.vim
 
 - create:
     - ~/downloads
