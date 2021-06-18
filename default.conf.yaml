@@ -12,6 +12,7 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.config/nvim/init.vim: init.vim
+    ~/.zshrc: zshrc
 
 - create:
     - ~/downloads
