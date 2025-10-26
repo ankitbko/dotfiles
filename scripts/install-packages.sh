@@ -1,6 +1,6 @@
 # install zoxide batcat
 echo "Installing zoxide and bat..."
-sudo apt update && apt install -y zoxide bat
+sudo apt update && sudo apt install -y zoxide bat
 
 # install fzf
 echo "Installing fzf..."
