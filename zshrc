@@ -8,6 +8,14 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Cache completions aggressively
+autoload -Uz compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+    compinit
+else
+    compinit -C
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/anksinha/.oh-my-zsh"
 
@@ -77,7 +85,16 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  sudo
+  dirhistory
+  copypath
+  copyfile
+  copybuffer
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,6 +123,23 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# fzf settings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND="find ~+ -type f"
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline"
+
+# Autosuggest settings
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=53,bg=247,standout"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+
+# zoxide settings
+eval "$(zoxide init zsh)"
+alias cd="z"
+
+# batcat settings
+alias cat="batcat"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
